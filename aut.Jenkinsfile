@@ -7,11 +7,13 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-            sh 'def j = 1
-                while (j <= 5) {
-                    println("iteration number $j")
-                    j++
-                }'
+            sh '''
+            def j = 1
+            while (j <= 5) {
+                echo "iteration number $j"
+                j++
+            }
+            '''
             }
         }
     }
