@@ -4,7 +4,7 @@ pipeline {
         disableConcurrentBuilds()
     }
     parameters {
-        string(name: 'count', description: 'count of iteration', defaultValue: 'integer')
+        integer(name: 'count', description: 'count of iteration')
     }
     stages{
         stage('Run Groovy Script') {
