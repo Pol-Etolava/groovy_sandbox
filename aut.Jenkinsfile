@@ -4,15 +4,17 @@ pipeline {
         // Timeout counter starts AFTER agent is allocated
         timeout(time: 5, unit: 'SECONDS')
     }
-    stage('Run Groovy Script') {
-        steps {
-            sh '''
-            def j = 1
-            while (j <= 5) {
-                echo "iteration number $j"
-                j++
+    stages{
+        stage('Run Groovy Script') {
+            steps {
+                sh '''
+                def j = 1
+                while (j <= 5) {
+                    echo "iteration number $j"
+                    j++
+                }
+                '''
             }
-            '''
         }
     }
 }
