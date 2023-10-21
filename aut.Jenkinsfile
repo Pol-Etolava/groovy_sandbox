@@ -10,7 +10,7 @@ pipeline {
         stage('Run Groovy Script') {
             steps {
                 script {
-                    println ${params.text}
+                    println${params.text}
                 }
             }
         }
