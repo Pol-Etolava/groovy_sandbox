@@ -1,6 +1,7 @@
 pipeline {
     agent any
     options {
+        disableConcurrentBuilds()
     }
     stages{
         stage('Run Groovy Script') {
